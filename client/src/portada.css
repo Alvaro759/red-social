@@ -1,41 +1,57 @@
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100vh;
   background-color: #000000;
   color: #fff;
-  padding: 15px 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-nav ul {
+.sidebar nav ul {
   list-style-type: none;
   padding: 0;
-  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Ocupa todo el espacio restante */
+  justify-content: center; /* Centra verticalmente los elementos */
 }
 
-nav ul li {
-  display: inline-block;
+.sidebar nav ul li {
+  margin-bottom: 10px;
 }
 
-nav ul li a {
+.sidebar nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
   padding: 10px 15px;
   border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex; /* Alinea los elementos verticalmente */
+  align-items: center; /* Centra verticalmente los elementos */
+  transition: color 0.5s ease;
 }
 
-nav ul li a:hover {
-  background-color: #007bff;
-  color: #fff;
+.sidebar nav ul li a:hover {
+  color: #1bb7eb;
+  scale: 1.5;
+  transition: color 0.5s ease;
+}
+
+.material-icons {
+  font-size: 30px;
+  margin-right: 10px;
 }
 
 .main {
+  margin-left: 200px;
   padding: 30px;
 }
 
@@ -69,9 +85,16 @@ nav ul li a:hover {
 }
 
 .interactions button:hover {
-  background-color: #0056b3; /* Cambio de color al pasar el ratón */
+  background-color: #0056b3;
 }
 
 .comments {
   margin-top: 20px;
+}
+
+.App-logo1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
 }

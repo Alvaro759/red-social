@@ -43,29 +43,42 @@ export default App;**/
 
 import React from "react";
 import "./portada.css";
+import logo from "./logo.png";
 
 function Menu() {
   return (
-    <header>
+    <header className="sidebar">
       <nav>
         <ul>
           <li>
-            <a href="d">Inicio</a>
+            <a href="d">
+              <span className="material-icons">home</span>
+            </a>
           </li>
           <li>
-            <a href="d">Perfil</a>
+            <a href="d">
+              <span className="material-icons">person</span>
+            </a>
           </li>
           <li>
-            <a href="d">Notificaciones</a>
+            <a href="d">
+              <span className="material-icons">notifications</span>
+            </a>
           </li>
           <li>
-            <a href="d">Mensajes</a>
+            <a href="d">
+              <span className="material-icons">message</span>
+            </a>
           </li>
           <li>
-            <a href="d">Buscar</a>
+            <a href="d">
+              <span className="material-icons">search</span>
+            </a>
           </li>
           <li>
-            <a href="d">Configuración</a>
+            <a href="d">
+              <span className="material-icons">settings</span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -75,22 +88,12 @@ function Menu() {
 
 function Portada() {
   return (
-    <div className="post">
+    <div className="main">
       <Menu />
-      <div className="container">
-        <div className="user-info">
-          <img src="avatar.jpg" alt="Avatar del Usuario" />
-          <h3>Nombre del Usuario</h3>
-        </div>
-        <div className="post-content">
-          <p>Contenido de la publicación...</p>
-          <div className="interactions">
-            <button className="like-btn">Me Gusta</button>
-            <button className="comment-btn">Comentar</button>
-          </div>
-          <div className="comments">{/* Aquí se mostrarán los comentarios */}</div>
-        </div>
+      <div className="encabezado">
+        <img src={logo} className="App-logo1" alt="logo" />
       </div>
+      <div className="container"></div>
     </div>
   );
 }

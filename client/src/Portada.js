@@ -7,22 +7,34 @@ function Menu() {
       <nav>
         <ul>
           <li>
-            <a href="d">Inicio</a>
+            <a href="d">
+              <i className="material-icons">home</i>
+            </a>
           </li>
           <li>
-            <a href="d">Perfil</a>
+            <a href="d">
+              <i className="material-icons">person</i>
+            </a>
           </li>
           <li>
-            <a href="d">Notificaciones</a>
+            <a href="d">
+              <i className="material-icons">notifications</i>
+            </a>
           </li>
           <li>
-            <a href="d">Mensajes</a>
+            <a href="d">
+              <i className="material-icons">message</i>
+            </a>
           </li>
           <li>
-            <a href="d">Buscar</a>
+            <a href="d">
+              <i className="material-icons">search</i>
+            </a>
           </li>
           <li>
-            <a href="d">Configuración</a>
+            <a href="d">
+              <i className="material-icons">settings</i>
+            </a>
           </li>
         </ul>
       </nav>
