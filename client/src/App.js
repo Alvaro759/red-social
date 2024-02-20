@@ -1,8 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import logo from "./logo.png";
-import fondoForm from "./fondoForm.avif";
+import * as imagenes from "./Imagenes";
 import Portada from "./Portada";
 import NavigationMenu from "./NavigationMenu";
 
@@ -11,10 +10,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <section className="sectionLogo">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={imagenes.logo} className="App-logo" alt="logo" />
         </section>
         <section className="sectionForm">
-          <img src={fondoForm} className="fondoForm" alt="fondoForm" />
+          <img src={imagenes.fondoForm} className="fondoForm" alt="fondoForm" />
           <NavigationMenu /> {/* Utiliza el componente NavigationMenu aquí */}
         </section>
       </header>
