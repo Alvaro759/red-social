@@ -1,62 +1,66 @@
 import React from "react";
 import "./portada.css";
+import logo from "./logo.png";
+import fotoPerfil from "./usuario1.jpeg";
+import fotoPerfil1 from "./foto1.jpeg";
+import fotoPerfil2 from "./foto2.jpeg";
+import fotoPerfil3 from "./foto3.jpeg";
+import Menu from "./Menu";
 
-function Menu() {
+function Historias() {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="d">
-              <i className="material-icons">home</i>
-            </a>
-          </li>
-          <li>
-            <a href="d">
-              <i className="material-icons">person</i>
-            </a>
-          </li>
-          <li>
-            <a href="d">
-              <i className="material-icons">notifications</i>
-            </a>
-          </li>
-          <li>
-            <a href="d">
-              <i className="material-icons">message</i>
-            </a>
-          </li>
-          <li>
-            <a href="d">
-              <i className="material-icons">search</i>
-            </a>
-          </li>
-          <li>
-            <a href="d">
-              <i className="material-icons">settings</i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div className="historias">
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+      <img className="fotohistoria" src={fotoPerfil} alt=""></img>
+    </div>
+  );
+}
+
+function Publicaciones() {
+  return (
+    <div className="publicaciones">
+      <div className="contenidoSuperior">
+        <img className="fotoperfil" src={fotoPerfil} alt=""></img>
+        <h2>Ivanrodriiguezz__</h2>
+        <br />
+        <br />
+        <div className="BtnSeguir">
+          <a href="d">
+            <span className="material-icons">person_add</span>
+          </a>
+        </div>
+      </div>
+      <div className="contenidoInferior">
+        <img src={fotoPerfil1} alt=""></img>
+        <img src={fotoPerfil2} alt=""></img>
+        <img src={fotoPerfil3} alt=""></img>
+      </div>
+    </div>
   );
 }
 
 function Portada() {
   return (
-    <div className="post">
+    <div className="main">
       <Menu />
-      <div className="user-info">
-        <img src="avatar.jpg" alt="Avatar del Usuario" />
-        <h3>Nombre del Usuario</h3>
+      <div className="encabezado">
+        <Historias />
+        <img src={logo} className="App-logo1" alt="logo" />
       </div>
-      <div className="post-content">
-        <p>Contenido de la publicación...</p>
-        <div className="interactions">
-          <button className="like-btn">Me Gusta</button>
-          <button className="comment-btn">Comentar</button>
-        </div>
-        <div className="comments">{/* Aquí se mostrarán los comentarios */}</div>
+      <div className="container">
+        <Publicaciones />
+        <Publicaciones />
       </div>
     </div>
   );

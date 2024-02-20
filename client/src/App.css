@@ -31,6 +31,9 @@ body {
   color: #000000;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .fondoForm {
   position: absolute;
@@ -72,6 +75,10 @@ button {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+button {
+  width: 100%;
 }
 
 input[type="text"],
