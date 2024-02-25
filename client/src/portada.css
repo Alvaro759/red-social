@@ -42,7 +42,6 @@
 .sidebar nav ul li a:hover {
   color: #1bb7eb;
   scale: 1.5;
-  transition: 0.5s ease;
 }
 
 .material-icons {
@@ -51,18 +50,19 @@
 }
 
 .main {
-  margin-left: 200px;
   padding: 30px;
   height: 100vh;
-  width: 100vw;
+  width: calc(100% - 100px); /* Calcula el ancho restante de la pantalla */
+  overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+  margin-left: 100px; /* Ajuste el margen izquierdo para dejar espacio para el menú */
 }
 
 .container {
   padding: 20px;
+  margin-left: 100px; /* Ajuste el margen izquierdo para dejar espacio para el menú */
 }
 
 .cuerpo {
-  margin-left: 70px;
   width: 100%;
 }
 
@@ -167,5 +167,4 @@
 
 .fotohistoria:hover {
   scale: 1.2;
-  transition: 0.5s ease;
 }
