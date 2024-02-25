@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100px;
+  width: 5%;
   height: 100vh;
   background-color: #000000;
   color: #fff;
@@ -52,9 +52,7 @@
 .main {
   padding: 30px;
   height: 100vh;
-  width: calc(100% - 100px); /* Calcula el ancho restante de la pantalla */
-  overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
-  margin-left: 100px; /* Ajuste el margen izquierdo para dejar espacio para el menú */
+  width: 100vw;
 }
 
 .container {
