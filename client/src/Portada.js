@@ -3,26 +3,6 @@ import "./portada.css";
 import * as imagenes from "./Imagenes";
 import Menu from "./Menu";
 
-function Historias() {
-  return (
-    <div className="historias">
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-      <img className="fotohistoria" src={imagenes.fotoPerfil} alt=""></img>
-    </div>
-  );
-}
-
 // Componente de Publicaciones
 function Publicaciones(props) {
   // Desestructura las propiedades
@@ -78,10 +58,7 @@ function Portada() {
     <div className="main">
       <Menu />
       <div className="cuerpo">
-        <div className="encabezado">
-          <Historias />
-          <img src={imagenes.logo} className="App-logo1" alt="logo" />
-        </div>
+        <div className="encabezado"></div>
         <div className="container">
           {/* Renderiza las publicaciones de cada usuario */}
           {usuariosPublicaciones.map((usuarioData, index) => (

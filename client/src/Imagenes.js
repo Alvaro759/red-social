@@ -7,3 +7,4 @@ export { default as fotoPerfil3 } from "./imagenes/usuario3.jpeg";
 export { default as publicacion1 } from "./imagenes/foto3.jpeg";
 export { default as publicacion2 } from "./imagenes/foto2.jpeg";
 export { default as publicacion3 } from "./imagenes/foto1.jpeg";
+export { default as logoBlanco } from "./imagenes/image.png";
