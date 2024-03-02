@@ -58,7 +58,6 @@ function Portada() {
     <div className="main">
       <Menu />
       <div className="cuerpo">
-        <div className="encabezado"></div>
         <div className="container">
           {/* Renderiza las publicaciones de cada usuario */}
           {usuariosPublicaciones.map((usuarioData, index) => (

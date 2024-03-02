@@ -1,15 +1,7 @@
 .sidebar {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 5%;
-  height: 100vh;
+  height: 100%;
   background-color: #000000;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .logo {
@@ -20,34 +12,30 @@
 
 .menu-opciones {
   display: flex;
+  transform: translateY(50%);
   flex-direction: column;
   align-items: center;
-  transform: translateY(50%);
 }
 
 .sidebar nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; /* Ocupa todo el espacio restante */
-  justify-content: center; /* Centra verticalmente los elementos */
 }
 
 .sidebar nav ul li {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .sidebar nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
   padding: 10px 15px;
   border-radius: 5px;
   display: flex; /* Alinea los elementos verticalmente */
-  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center;
   transition: 0.5s ease;
 }
 
@@ -58,7 +46,6 @@
 
 .material-icons {
   font-size: 30px;
-  margin-right: 10px;
 }
 
 .main {
@@ -94,6 +81,7 @@
 }
 
 .publicaciones {
+  margin-left: 15px;
   margin-bottom: 30px;
   border: 2px solid #ddd;
   border-radius: 10px;
@@ -180,7 +168,7 @@
 }
 
 .logoBlanco {
-  width: 150px;
+  width: 125px;
 }
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
