@@ -170,28 +170,40 @@
 .logoBlanco {
   width: 125px;
 }
+
+.phone{
+  display: none;
+}
+
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
+  .phone{
+    display: block;
+    text-align: center;
+  }
+
+  .phone hr{
+    margin-left: 25%;
+    width: 50%;
+  }
+
   .sidebar {
     width: 100%;
     height: auto;
     padding: 10px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
+    top: 862px;
   }
 
   .container{
-    margin-top: 150px !important;
+    margin-bottom: 50px !important;
     margin: 0;
   }
 
   .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
 
   .menu-opciones {
@@ -209,10 +221,6 @@
 
   .sidebar nav ul li {
     margin-bottom: 0;
-  }
-
-  .main {
-    padding: 10px;
   }
 
   .cuerpo {

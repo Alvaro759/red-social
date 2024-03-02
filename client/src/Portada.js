@@ -13,8 +13,6 @@ function Publicaciones(props) {
       <div className="contenidoSuperior">
         <img className="fotoperfil" src={usuario.fotoPerfil} alt=""></img>
         <h2>{usuario.nombreUsuario}</h2>
-        <br />
-        <br />
         <div className="BtnSeguir">
           <a href={usuario.enlaceSeguir}>
             <span className="material-icons">person_add</span>
@@ -67,6 +65,10 @@ function Portada() {
     <div className={darkMode ? "dark-mode" : ""}>
       <div className="main">
         <Menu />
+        <div className="phone">
+          <h1>PixPlace</h1>
+          <hr></hr>
+        </div>
         <div className="cuerpo">
           <div className="container">
             {/* Renderiza las publicaciones de cada usuario */}
