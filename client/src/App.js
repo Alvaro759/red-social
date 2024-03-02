@@ -1,9 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
 import * as imagenes from "./Imagenes";
 import Portada from "./Portada";
 import Login from "./login";
+import Settings from "./settings";
+import { DarkModeProvider } from "./DarkModeContext";
 
 function App() {
   return (
@@ -24,10 +25,13 @@ function App() {
 export default function MyApp() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/home" element={<Portada />} />
-      </Routes>
+      <DarkModeProvider>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/home" element={<Portada />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </DarkModeProvider>
     </Router>
   );
 }

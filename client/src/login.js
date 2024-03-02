@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Login() {
   return (
-    <div className="container">
+    <div className="containerForm">
       <form className="login-form">
         <h2>Inicia Sesión</h2>
         <input type="text" placeholder="Correo Electrónico" />

@@ -1,7 +1,7 @@
-import React from "react";
-import "./portada.css";
+import React, { useContext } from "react";
 import * as imagenes from "./Imagenes";
 import Menu from "./Menu";
+import { DarkModeContext } from "./DarkModeContext";
 
 // Componente de Publicaciones
 function Publicaciones(props) {
@@ -33,6 +33,7 @@ function Publicaciones(props) {
 
 // Componente de Portada
 function Portada() {
+  const { darkMode } = useContext(DarkModeContext);
   // Datos simulados de usuarios y sus publicaciones
   const usuariosPublicaciones = [
     {
@@ -41,7 +42,11 @@ function Portada() {
         fotoPerfil: imagenes.fotoPerfil,
         enlaceSeguir: "enlace_a_seguir_usuario",
       },
-      publicaciones: [imagenes.publicacion1, imagenes.publicacion2, imagenes.publicacion3],
+      publicaciones: [
+        imagenes.publicacion1,
+        imagenes.publicacion2,
+        imagenes.publicacion3,
+      ],
     },
 
     {
@@ -50,19 +55,25 @@ function Portada() {
         fotoPerfil: imagenes.fotoPerfil2,
         enlaceSeguir: "enlace_a_seguir_otro_usuario",
       },
-      publicaciones: [imagenes.publicacion1, imagenes.publicacion2, imagenes.publicacion3],
+      publicaciones: [
+        imagenes.publicacion1,
+        imagenes.publicacion2,
+        imagenes.publicacion3,
+      ],
     },
   ];
 
   return (
-    <div className="main">
-      <Menu />
-      <div className="cuerpo">
-        <div className="container">
-          {/* Renderiza las publicaciones de cada usuario */}
-          {usuariosPublicaciones.map((usuarioData, index) => (
-            <Publicaciones key={index} {...usuarioData} />
-          ))}
+    <div className={darkMode ? "dark-mode" : ""}>
+      <div className="main">
+        <Menu />
+        <div className="cuerpo">
+          <div className="container">
+            {/* Renderiza las publicaciones de cada usuario */}
+            {usuariosPublicaciones.map((usuarioData, index) => (
+              <Publicaciones key={index} {...usuarioData} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

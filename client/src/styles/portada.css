@@ -49,14 +49,14 @@
 }
 
 .main {
-  padding: 30px;
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .container {
   padding: 20px;
-  margin-left: 100px; /* Ajuste el margen izquierdo para dejar espacio para el menú */
+  margin-left: 125px; /* Ajuste el margen izquierdo para dejar espacio para el menú */
 }
 
 .cuerpo {
@@ -81,7 +81,7 @@
 }
 
 .publicaciones {
-  margin-left: 15px;
+  margin-left: 5px;
   margin-bottom: 30px;
   border: 2px solid #ddd;
   border-radius: 10px;
@@ -176,10 +176,16 @@
     width: 100%;
     height: auto;
     padding: 10px;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: center;
+    justify-content: center;
+  }
+
+  .container{
+    margin-top: 150px !important;
+    margin: 0;
   }
 
   .logo {
@@ -190,18 +196,19 @@
 
   .menu-opciones {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     transform: translateY(2%);
   }
 
   .sidebar nav ul {
+    display: flex;
     flex-direction: row;
   }
 
   .sidebar nav ul li {
     margin-bottom: 0;
-    margin-right: 10px;
   }
 
   .main {

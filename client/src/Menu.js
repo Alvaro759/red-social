@@ -36,7 +36,7 @@ function Menu() {
               </a>
             </li>
             <li>
-              <a href="d">
+              <a href="/settings">
                 <span className="material-icons">settings</span>
               </a>
             </li>
