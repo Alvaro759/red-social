@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import * as imagenes from "./Imagenes";
 import Portada from "./Portada";
-import NavigationMenu from "./NavigationMenu";
+import Login from "./login";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         </section>
         <section className="sectionForm">
           <img src={imagenes.fondoForm} className="fondoForm" alt="fondoForm" />
-          <NavigationMenu /> {/* Utiliza el componente NavigationMenu aquí */}
+          <Login />
         </section>
       </header>
     </div>

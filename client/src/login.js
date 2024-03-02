@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function NavigationMenu() {
+function Login() {
   return (
     <div className="container">
       <form className="login-form">
@@ -21,4 +21,4 @@ function NavigationMenu() {
   );
 }
 
-export default NavigationMenu;
+export default Login;

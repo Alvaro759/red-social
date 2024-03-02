@@ -11,7 +11,7 @@ function Menu() {
         <nav>
           <ul>
             <li>
-              <a href="d">
+              <a href="/home">
                 <span className="material-icons">home</span>
               </a>
             </li>
