@@ -2,16 +2,15 @@ import React, { useContext } from "react";
 import * as imagenes from "./Imagenes";
 import Menu from "./Menu";
 import { DarkModeContext } from "./DarkModeContext";
+import { Carousel } from "react-bootstrap";
 
-// Componente de Publicaciones
 function Publicaciones(props) {
-  // Desestructura las propiedades
   const { usuario, publicaciones } = props;
 
   return (
     <div className="publicaciones">
       <div className="contenidoSuperior">
-        <img className="fotoperfil" src={usuario.fotoPerfil} alt=""></img>
+        <img className="fotoperfil" src={usuario.fotoPerfil} alt="" />
         <h2>{usuario.nombreUsuario}</h2>
         <div className="BtnSeguir">
           <a href={usuario.enlaceSeguir}>
@@ -19,11 +18,22 @@ function Publicaciones(props) {
           </a>
         </div>
       </div>
-      <div className="contenidoInferior">
+      <div className="contenidoInferiorGrande">
         {/* Muestra las publicaciones del usuario */}
         {publicaciones.map((publicacion, index) => (
           <img key={index} src={publicacion} alt=""></img>
         ))}
+      </div>
+      <div className="contenidoInferior d-md-none">
+        {" "}
+        {/* d-md-none solo se mostrará en dispositivos de menos de 768px */}
+        <Carousel>
+          {publicaciones.map((publicacion, index) => (
+            <Carousel.Item key={index}>
+              <img className="d-block w-100" src={publicacion} alt={`Slide ${index}`} />
+            </Carousel.Item>
+          ))}
+        </Carousel>
       </div>
     </div>
   );
@@ -32,7 +42,7 @@ function Publicaciones(props) {
 // Componente de Portada
 function Portada() {
   const { darkMode } = useContext(DarkModeContext);
-  // Datos simulados de usuarios y sus publicaciones
+
   const usuariosPublicaciones = [
     {
       usuario: {
@@ -40,24 +50,15 @@ function Portada() {
         fotoPerfil: imagenes.fotoPerfil,
         enlaceSeguir: "enlace_a_seguir_usuario",
       },
-      publicaciones: [
-        imagenes.publicacion1,
-        imagenes.publicacion2,
-        imagenes.publicacion3,
-      ],
+      publicaciones: [imagenes.publicacion1, imagenes.publicacion2, imagenes.publicacion3],
     },
-
     {
       usuario: {
         nombreUsuario: "Elenagarciiaa__",
         fotoPerfil: imagenes.fotoPerfil2,
         enlaceSeguir: "enlace_a_seguir_otro_usuario",
       },
-      publicaciones: [
-        imagenes.publicacion1,
-        imagenes.publicacion2,
-        imagenes.publicacion3,
-      ],
+      publicaciones: [imagenes.publicacion1, imagenes.publicacion2, imagenes.publicacion3],
     },
   ];
 
@@ -67,11 +68,10 @@ function Portada() {
         <Menu />
         <div className="phone">
           <h1>PixPlace</h1>
-          <hr></hr>
+          <hr />
         </div>
         <div className="cuerpo">
           <div className="container">
-            {/* Renderiza las publicaciones de cada usuario */}
             {usuariosPublicaciones.map((usuarioData, index) => (
               <Publicaciones key={index} {...usuarioData} />
             ))}
