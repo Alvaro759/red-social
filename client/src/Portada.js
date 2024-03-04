@@ -24,10 +24,9 @@ function Publicaciones(props) {
           <img key={index} src={publicacion} alt=""></img>
         ))}
       </div>
-      <div className="contenidoInferior d-md-none">
+      <div className="contenidoInferior">
         {" "}
-        {/* d-md-none solo se mostrará en dispositivos de menos de 768px */}
-        <Carousel>
+        <Carousel interval={null}>
           {publicaciones.map((publicacion, index) => (
             <Carousel.Item key={index}>
               <img className="d-block w-100" src={publicacion} alt={`Slide ${index}`} />
@@ -71,7 +70,7 @@ function Portada() {
           <hr />
         </div>
         <div className="cuerpo">
-          <div className="container">
+          <div className="containerP">
             {usuariosPublicaciones.map((usuarioData, index) => (
               <Publicaciones key={index} {...usuarioData} />
             ))}

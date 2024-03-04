@@ -24,22 +24,18 @@ function Settings() {
   return (
     <div className={darkMode ? "main dark-mode" : "main"}>
       <Menu />
-      <div className="container">
+      <div className="containerP">
         <div className="align-center">
           <h2>Ajustes</h2>
           <div className="containerSettings">
-            <div className="m-1">
+            <div className="margin">
               <span>Cambiar tema </span>
               <label className="switch">
-                <input
-                  type="checkbox"
-                  checked={darkMode}
-                  onChange={toggleDarkMode}
-                />
+                <input type="checkbox" checked={darkMode} onChange={toggleDarkMode} />
                 <span className="slider round"></span>
               </label>
               <h3>Privacidad</h3>
-              <div className="form-select m-1">
+              <div className="formSelect margin">
                 <span>¿Quién puede enviarte mensajes?</span>
                 <select>
                   <option selected>Todo el mundo</option>
@@ -48,14 +44,10 @@ function Settings() {
                   <option>Nadie</option>
                 </select>
               </div>
-              <div className="form-select m-1">
+              <div className="formSelect m-1">
                 <span>Mostrar mi email</span>
                 <label className="switch">
-                  <input 
-                    type="checkbox" 
-                    checked={showEmail}
-                    onChange={handleEmailCheckboxChange}
-                  />
+                  <input type="checkbox" checked={showEmail} onChange={handleEmailCheckboxChange} />
                   <span className="slider round"></span>
                 </label>
               </div>
