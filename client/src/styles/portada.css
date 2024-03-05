@@ -131,9 +131,8 @@
   gap: 10px;
 }
 
-.contenidoInferior img {
-  width: 350px;
-  height: auto;
+.contenidoInferiorGrande img {
+  width: 20%;
 }
 
 .historias {

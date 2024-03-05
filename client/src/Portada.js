@@ -59,6 +59,14 @@ function Portada() {
       },
       publicaciones: [imagenes.publicacion1, imagenes.publicacion2, imagenes.publicacion3],
     },
+    {
+      usuario: {
+        nombreUsuario: "_alvarocaraballo_04",
+        fotoPerfil: imagenes.fotoPerfil3,
+        enlaceSeguir: "enlace_a_seguir_otro_usuario",
+      },
+      publicaciones: [imagenes.publicacionAlvaro1, imagenes.publicacionAlvaro2, imagenes.publicacionAlvaro3],
+    },
   ];
 
   return (
