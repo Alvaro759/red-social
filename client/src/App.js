@@ -4,6 +4,7 @@ import * as imagenes from "./Imagenes";
 import Portada from "./Portada";
 import Login from "./login";
 import Settings from "./settings";
+import Perfil from "./perfil";
 import { DarkModeProvider } from "./DarkModeContext";
 
 function App() {
@@ -30,6 +31,7 @@ export default function MyApp() {
           <Route path="/" element={<App />} />
           <Route path="/home" element={<Portada />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/perfil" element={<Perfil />} />
         </Routes>
       </DarkModeProvider>
     </Router>

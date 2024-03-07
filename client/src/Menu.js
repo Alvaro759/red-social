@@ -16,18 +16,8 @@ function Menu() {
               </a>
             </li>
             <li>
-              <a href="d">
+              <a href="/perfil">
                 <span className="material-icons">person</span>
-              </a>
-            </li>
-            <li>
-              <a href="d">
-                <span className="material-icons">notifications</span>
-              </a>
-            </li>
-            <li>
-              <a href="d">
-                <span className="material-icons">message</span>
               </a>
             </li>
             <li>
