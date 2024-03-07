@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import * as imagenes from "./Imagenes";
+import "./styles/Menu.css"; // Archivo CSS para estilos del menú de búsqueda
 
 function Menu() {
+  const [busquedaAbierta, setBusquedaAbierta] = useState(false);
+
+  const toggleBusqueda = () => {
+    setBusquedaAbierta(!busquedaAbierta);
+  };
+
   return (
-    <header className="sidebar">
+    <header className={`sidebar ${busquedaAbierta ? "busqueda-abierto" : ""}`}>
       <div className="logo">
         <img src={imagenes.logoBlanco} className="logoBlanco" alt="logo" />
       </div>
@@ -21,7 +28,7 @@ function Menu() {
               </a>
             </li>
             <li>
-              <a href="d">
+              <a href="#" onClick={toggleBusqueda}>
                 <span className="material-icons">search</span>
               </a>
             </li>
@@ -33,6 +40,15 @@ function Menu() {
           </ul>
         </nav>
       </div>
+      {busquedaAbierta && (
+        <div className="menu-busqueda">
+          <span className="cerrar-menu" onClick={toggleBusqueda}>
+            &times;
+          </span>
+          <input type="text" placeholder="Buscar..." />
+          <button onClick={toggleBusqueda}>Cerrar</button>
+        </div>
+      )}
     </header>
   );
 }

@@ -20,11 +20,31 @@ function Perfil() {
       <Menu />
       <div className="containerP">
         <div className="perfil-info">
-          <img className="perfil-foto" src={perfilIvanrodriiguezz__.fotoPerfil} alt="Foto de perfil" />
-          <h2>{perfilIvanrodriiguezz__.nombreUsuario}</h2>
-          <p>Seguidores: {perfilIvanrodriiguezz__.seguidores}</p>
-          <p>Seguidos: {perfilIvanrodriiguezz__.seguidos}</p>
+          <div className="izPerfil">
+            <img
+              className="perfil-foto"
+              src={perfilIvanrodriiguezz__.fotoPerfil}
+              alt="Foto de perfil"
+            />
+            <h2>{perfilIvanrodriiguezz__.nombreUsuario}</h2>
+          </div>
+          <div className="seguidores">
+            <i class="material-icons">people</i>
+            <p>
+              <b>Seguidores:</b> <br />
+              {perfilIvanrodriiguezz__.seguidores}
+            </p>
+          </div>
+          <div className="seguidos">
+            <i class="material-icons">people_alt</i>
+            <p>
+              <b>Seguidos: </b>
+              <br />
+              {perfilIvanrodriiguezz__.seguidos}
+            </p>
+          </div>
         </div>
+
         <div className="perfil-publicaciones">
           <h3>Publicaciones</h3>
           <div className="publicaciones1">
